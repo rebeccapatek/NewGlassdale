@@ -1,8 +1,8 @@
 import { useConvictions } from "./ConvictionProvider.js"
 
 // Get a reference to the DOM element where the <select> will be rendered
-const contentTarget = document.querySelector(".filters__crime")
 const eventHub = document.querySelector(".container")
+const contentTarget = document.querySelector(".filters__crime")
 const ConvictionSelect = () => {
     // Get all convictions from application state
     const convictions = useConvictions()
