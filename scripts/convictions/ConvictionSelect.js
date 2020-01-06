@@ -19,9 +19,11 @@ const ConvictionSelect = () => {
     })
 
     const render = convictionsCollection => {
-        let options = convictionsCollection.map = (conviction => `
-        <option value=${convictions.split(" ").join("-")}>${conviction}</option> `).join(" ")
-            
+        console.log(convictionsCollection)
+        // Goes through all the objects in an array and passes each one through a new function
+        let options = convictionsCollection.map(conviction => 
+        `<option value=${conviction.split(" ").join("-")}>${conviction}</option>` ).join(" ")
+         console.log(options)   
         /*
             Use interpolation here to invoke the map() method on
             the convictionsCollection to generate the option elements.
@@ -34,10 +36,11 @@ const ConvictionSelect = () => {
 
             </select>
             `
+    }
       
 
     render(convictions)
 }
-}
+
 
 export default ConvictionSelect

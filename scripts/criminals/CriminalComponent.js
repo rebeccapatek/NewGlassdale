@@ -1,5 +1,4 @@
 const CriminalComponent = (criminal) => {
-    console.log("hello", criminal)
     return `
         <div class="criminals">
            
