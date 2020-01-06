@@ -1,6 +1,6 @@
 import { useCriminals } from "./CriminalDataProvider.js";
 import CriminalComponent from "./CriminalComponent.js";
-
+console.log("Crimi")
 const CriminalListComponent = () => {
     // Get a reference to the `<article class="content">` element (tells which class to insert the HTML)
     const contentElement = document.querySelector(".criminalsContainer");

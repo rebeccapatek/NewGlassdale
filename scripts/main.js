@@ -1,8 +1,10 @@
 import { getCriminals } from './criminals/CriminalDataProvider.js'
-import CriminalComponent from './criminals/CriminalComponent.js'
+
+import CriminalListComponent from './criminals/CriminalList.js'
+
 
 getCriminals().then(
-    CriminalComponent
+    CriminalListComponent
     /*
         Now that you have the data, what
         component should be rendered?
