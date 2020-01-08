@@ -21,7 +21,7 @@ const contentElement = document.querySelector(".criminalsContainer")
 //   };
 //   export default CriminalListComponent;
 
-  const CriminalListComponent = () => {
+const CriminalListComponent = () => {
     // Load the application state to be used by this component
     const appStateCriminals = useCriminals()
 
@@ -51,4 +51,4 @@ let render = criminals => {
         
 
     
-    export default CriminalListComponent
+export default CriminalListComponent

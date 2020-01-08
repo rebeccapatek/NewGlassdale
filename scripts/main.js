@@ -6,6 +6,9 @@ import ConvictionSelect from './convictions/ConvictionSelect.js'
 import NoteFormComponent from '../notes/NoteForm.js'
 import { getNotes } from '../notes/NoteDateProvider.js'
 import NoteListComponent from '../notes/NoteList.js'
+import { getWitnesses } from './witnesses/witnessDataProvider.js'
+import WitnessListComponent from './witnesses/WitnessList.js'
+
 getNotes().then(
     ()=> 
         NoteListComponent()
@@ -18,3 +21,7 @@ getCriminals().then(
     CriminalListComponent
 )
 getConvictions().then(ConvictionSelect)
+getWitnesses().then(
+    ()=>
+    WitnessListComponent()
+)

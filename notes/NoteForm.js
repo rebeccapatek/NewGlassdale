@@ -21,6 +21,13 @@ const NoteFormComponent = () => {
         eventHub.dispatchEvent(message)
         console.log("show notes was clicked")
     }})
+    eventHub.addEventListener("click", clickEvent => {
+        if (clickEvent.target.id ==="showWitnesses") {
+            const showW = new CustomEvent ("showWitnessesButtonClicked")
+            eventHub.dispatchEvent(showW)
+            console.log("show Witness button was clicked")
+        }
+    })
 
     const render = () => {
         contentTarget.innerHTML = `
@@ -30,6 +37,7 @@ const NoteFormComponent = () => {
                 <input type="date" id="note-datestamp">
                 <button id="saveNote">Save Note</button>
                 <button id="showNotes">Show Notes</button>
+                <button id="showWitnesses">Show Witnesses</button>
             </div>
         `
     }
