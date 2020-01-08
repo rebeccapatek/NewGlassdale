@@ -16,7 +16,7 @@ const WitnessListComponent = () => {
             }
               )
         
-              }
+              
 
   
     const render = (witnesses) => {
@@ -26,8 +26,9 @@ const WitnessListComponent = () => {
                     currentwit => {
                 return WitnessComponent(currentwit);
               })
-              .join("")}}
+              .join("")}
     `
+}
 }
 
   
