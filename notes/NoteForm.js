@@ -6,6 +6,7 @@ const contentTarget = document.querySelector(".noteFormContainer")
 
 const NoteFormComponent = () => {
     eventHub.addEventListener("editButtonClicked", event => {
+        console.log("hi there")
         const noteToBeEdited = event.detail.id
 
         const allNotesArray = useNotes()
@@ -17,8 +18,8 @@ const NoteFormComponent = () => {
         )
 
         document.querySelector("#note-id").value = theFoundedNote.id
-        document.querySelector("#note-text").value = theFoundedNote.text
-        document.querySelector("#note-suspect").value = theFoundedNote.suspect
+        document.querySelector("#note-text").value = theFoundedNote.noteText
+        document.querySelector("#note-suspect").value = theFoundedNote.noteSuspect
     })
     eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id === "saveNote") {
@@ -26,8 +27,8 @@ const NoteFormComponent = () => {
             if (hiddenInputValue !== "") {
                 const editedNote = {
                     id: parseInt(document.querySelector("#note-id").value, 10),
-                    text: document.querySelector("#note-text").value,
-                    suspect: document.querySelector("#note-suspect").value,
+                    noteText: document.querySelector("#note-text").value,
+                    noteSuspect: document.querySelector("#note-suspect").value,
                     date: Date.now()
                 }
 

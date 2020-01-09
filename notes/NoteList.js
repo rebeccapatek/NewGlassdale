@@ -50,9 +50,11 @@ const NoteListComponent = () => {
           let theNotethatMatchestheEditButton = currentnotes.find(note =>
               note.id === parseInt(Id, 10))
 
+              console.log(theNotethatMatchestheEditButton)
+
         document.querySelector("#note-id").value = theNotethatMatchestheEditButton.id
-        document.querySelector("#note-text").value = theNotethatMatchestheEditButton.text
-        document.querySelector("#note-suspect").value = theNotethatMatchestheEditButton.suspect
+        document.querySelector("#note-text").value = theNotethatMatchestheEditButton.noteText
+        document.querySelector("#note-suspect").value = theNotethatMatchestheEditButton.noteSuspect
           // find object by id then send to editNoteComponent
           //use the find array method, on current notes to find the note with an id that matches the id you grabbed off the edit button
           //console log that note 
