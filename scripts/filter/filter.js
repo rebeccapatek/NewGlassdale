@@ -16,6 +16,7 @@ export const FilterComponent = () => {
 
     eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id === "filterButton") {
+            console.log("filterButton clicked")
             const message = new CustomEvent("filterInitiated", {
                 detail: {
                     selectedOfficer: selectedOfficer ,

@@ -49,6 +49,26 @@ eventHub.addEventListener('officerSelected', selectEvent => {
     )
     render (findingCriminalsWhoWereArrestedByAnOfficer)
 })
+eventHub.addEventListener("filterInitiated", event => {
+    
+    const crimeName = event.detail.selectedCrime
+    const officerName = event.detail.selectedOfficer
+
+    const filteredCriminals = appStateCriminals.filter(
+        (individualCriminal) => {
+            if (individualCriminal.conviction === crimeName) {
+                return individualCriminal
+            }
+        }
+    )
+    .filter(criminal => {
+        if (criminal.arrestingOfficer === officerName) {
+            return criminal
+        }
+    })
+
+    render(filteredCriminals)
+})
 
 let render = criminals => {
     contentElement.innerHTML = `

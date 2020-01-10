@@ -25,8 +25,6 @@ getCriminals().then(
 )
 getConvictions().then(ConvictionSelect)
 getOfficers().then(officerSelect)
-getWitnesses().then(
-    ()=>
-    WitnessListComponent()
-)
-FilterComponent()
+getWitnesses().then(WitnessListComponent)
+.then(FilterComponent)
+   
