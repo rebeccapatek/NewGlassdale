@@ -10,6 +10,7 @@ import { getWitnesses } from './witnesses/witnessDataProvider.js'
 import WitnessListComponent from './witnesses/WitnessList.js'
 import officerSelect from './officers/OfficerSelect.js'
 import { getOfficers } from './officers/OfficerProvider.js'
+import { FilterComponent } from './filter/filter.js'
 
 getNotes().then(
     ()=> 
@@ -28,3 +29,4 @@ getWitnesses().then(
     ()=>
     WitnessListComponent()
 )
+FilterComponent()
