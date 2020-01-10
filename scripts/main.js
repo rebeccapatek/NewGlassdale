@@ -8,6 +8,8 @@ import { getNotes } from '../notes/NoteDateProvider.js'
 import NoteListComponent from '../notes/NoteList.js'
 import { getWitnesses } from './witnesses/witnessDataProvider.js'
 import WitnessListComponent from './witnesses/WitnessList.js'
+import officerSelect from './officers/OfficerSelect.js'
+import { getOfficers } from './officers/OfficerProvider.js'
 
 getNotes().then(
     ()=> 
@@ -21,6 +23,7 @@ getCriminals().then(
     CriminalListComponent
 )
 getConvictions().then(ConvictionSelect)
+getOfficers().then(officerSelect)
 getWitnesses().then(
     ()=>
     WitnessListComponent()
