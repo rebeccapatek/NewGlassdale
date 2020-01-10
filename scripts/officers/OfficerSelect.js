@@ -9,7 +9,7 @@ const officerSelect = () => {
     // Get all convictions from application state
     const officers = useOfficers()
     eventHub.addEventListener("change", changeEvent => {
-        if (changeEvent.target.classList.contains("dropdown")) {
+        if (changeEvent.target.classList.contains("dropdownOfficer")) {
             const selectedOfficer = changeEvent.target.value.split("-").join(" ")
             const message = new CustomEvent("officerSelected", {
                 detail: {
@@ -31,7 +31,7 @@ const officerSelect = () => {
             Look back at the example provided above.
         */
         contentTarget.innerHTML = `
-            <select class="dropdown" id="officerSelect">
+            <select class="dropdownOfficer" id="officerSelect">
                 <option value="0">Please select an arresting officer...</option>
                 ${options}
 

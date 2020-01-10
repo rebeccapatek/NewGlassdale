@@ -37,7 +37,19 @@ const CriminalListComponent = () => {
         )
         render (findingCriminalsWhoDidACrime)
 })
-}
+
+eventHub.addEventListener('officerSelected', selectEvent => {
+    const officer = selectEvent.detail.officer
+    const findingCriminalsWhoWereArrestedByAnOfficer = appStateCriminals.filter(
+        (currentCriminal) => {
+            if (currentCriminal.arrestingOfficer === officer) {
+                return currentCriminal
+            }
+        }
+    )
+    render (findingCriminalsWhoWereArrestedByAnOfficer)
+})
+
 let render = criminals => {
     contentElement.innerHTML = `
                 ${
@@ -49,6 +61,6 @@ let render = criminals => {
                
                 }
         
-
+            }
     
 export default CriminalListComponent
