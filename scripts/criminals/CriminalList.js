@@ -26,29 +26,29 @@ const CriminalListComponent = () => {
     const appStateCriminals = useCriminals()
 
     // What should happen when detective selects a crime?
-    eventHub.addEventListener('convictionSelected', event => {
-        const crime = event.detail.crime
-        const findingCriminalsWhoDidACrime = appStateCriminals.filter(
-            (currentCriminal) => {
-                if (currentCriminal.conviction === crime) {
-                    return currentCriminal
-                }
-            }
-        )
-        render (findingCriminalsWhoDidACrime)
-})
+//     eventHub.addEventListener('convictionSelected', event => {
+//         const crime = event.detail.crime
+//         const findingCriminalsWhoDidACrime = appStateCriminals.filter(
+//             (currentCriminal) => {
+//                 if (currentCriminal.conviction === crime) {
+//                     return currentCriminal
+//                 }
+//             }
+//         )
+//         render (findingCriminalsWhoDidACrime)
+// })
 
-eventHub.addEventListener('officerSelected', selectEvent => {
-    const officer = selectEvent.detail.officer
-    const findingCriminalsWhoWereArrestedByAnOfficer = appStateCriminals.filter(
-        (currentCriminal) => {
-            if (currentCriminal.arrestingOfficer === officer) {
-                return currentCriminal
-            }
-        }
-    )
-    render (findingCriminalsWhoWereArrestedByAnOfficer)
-})
+// eventHub.addEventListener('officerSelected', selectEvent => {
+//     const officer = selectEvent.detail.officer
+//     const findingCriminalsWhoWereArrestedByAnOfficer = appStateCriminals.filter(
+//         (currentCriminal) => {
+//             if (currentCriminal.arrestingOfficer === officer) {
+//                 return currentCriminal
+//             }
+//         }
+//     )
+//     render (findingCriminalsWhoWereArrestedByAnOfficer)
+// })
 eventHub.addEventListener("filterInitiated", event => {
     
     const crimeName = event.detail.selectedCrime

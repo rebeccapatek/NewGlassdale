@@ -10,7 +10,7 @@ export const FilterComponent = () => {
         selectedOfficer = event.detail.officer 
     })
 
-    eventHub.addEventListener("crimeSelected", event => {
+    eventHub.addEventListener("convictionSelected", event => {
         selectedCrime = event.detail.crime
     })
 

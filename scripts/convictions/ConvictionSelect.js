@@ -19,7 +19,6 @@ const ConvictionSelect = () => {
     })
 
     const render = convictionsCollection => {
-        console.log(convictionsCollection)
         // Goes through all the objects in an array and passes each one through a new function
         let options = convictionsCollection.map(conviction => 
         `<option value=${conviction.split(" ").join("-")}>${conviction}</option>` ).join(" ")  
